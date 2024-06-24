@@ -1,0 +1,1 @@
+return{f=function()if __index==true then local a,b,c,d,e,f,g,h,a,b,i,j,k end end,n={},ctrl={},keybind={},checkConditions=function()if n.igga~=(ctrl.v or ctrl.c or ctrl.f):lower()then if n.igga==(ctrl.l or keybind.g or ctrl.q):lower()then os.sleep(1)else print("Tamper detected")end end end}
