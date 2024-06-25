@@ -46,10 +46,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
     Duration = 14
     Button1 = "Okay"
 })
---[[
-    idkijn = 98999
-    98999 cuz why not?
-]]--
+-- Made by RIP#6666
 _G.Settings = {
     Players = {
         ["Ignore Me"] = true, -- Ignore your Character
@@ -72,6 +69,6 @@ _G.Settings = {
     ["No Shadows"] = true, -- Remove Shadows
     ["Low Rendering"] = true, -- Lower Rendering
     ["Low Quality Parts"] = true -- Lower quality parts
-}
+    }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
   end)
