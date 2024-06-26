@@ -3,7 +3,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("DV7 Hub (First Edition)", "Synapse")
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Hey, " .. players.LocalPlayer.DisplayName;
+    Title = "Info"
     Text = "Welcome To Our Script! This script is owned by the server : https://discord.gg/cYexdSQRXW" .. players.LocalPlayer.DisplayName;
     Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
     Duration = 14
@@ -14,7 +14,13 @@ local discord = Window:NewTab("Discord")
 local dv7team = discord:NewSection("Discord")
 
 dv7team:NewButton("Discord Server", "c", function()
-    setclipboard("https://discord.gg/cYexdSQRXW")
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Discord"
+    Text =  https://discord.gg/cYexdSQRXW" .. players.LocalPlayer.DisplayName;
+    Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
+    Duration = 14
+    Button1 = "Okay"
+})
   end)
 
 -- MAIN
@@ -104,7 +110,5 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BrandonJay-BRX/Yarhm-
   end)
 -- splitt
 dv6:NewButton("Jul Hub New IceHub", "c", function()
- setclipboard("BETAAAA276276547257")
-    warn("enjoy the script key")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/vsqzz/FURIOUS2/main/FuriousHub'))()
   end)
