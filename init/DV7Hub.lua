@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))() --path to execute
-local Window = OrionLib:MakeWindow({Name = "DV7 Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "DV7Errors" IntoText = "DV7 Hub"})
+local Window = OrionLib:MakeWindow({Name = "DV7 Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "DV7Errors"})
 OrionLib:MakeNotification({
 	Name = "DV7 Hub",
 	Content = "Welcome to DV7 Hub!",
@@ -39,7 +39,7 @@ Tab:AddButton({
 })
   	end    
 })
-local Section = Tab:AddSection({
+local Sections = Tab:AddSection({
 		Name = "FPS Related"
 	})
 Tab:AddButton({
