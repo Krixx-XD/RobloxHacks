@@ -2,26 +2,6 @@
 --scripts
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("DV7 Hub (First Edition)", "Synapse")
-game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Info"
-    Text = "Welcome To Our Script! This script is owned by the server : https://discord.gg/cYexdSQRXW" .. players.LocalPlayer.DisplayName;
-    Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
-    Duration = 14
-    Button1 = "Okay"
-})
---discord
-local discord = Window:NewTab("Discord")
-local dv7team = discord:NewSection("Discord")
-
-dv7team:NewButton("Discord Server", "c", function()
-    game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Discord"
-    Text =  "https://discord.gg/cYexdSQRXW"
-    Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
-    Duration = 14
-    Button1 = "Okay"
-})
-  end)
 
 -- MAIN
 local Main = Window:NewTab("HOT SCRIPTS")
@@ -93,22 +73,4 @@ _G.Settings = {
     ["Low Quality Parts"] = true -- Lower quality parts
     }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheDV7s/RobloxHacks/main/scripts/FPS.lua"))()
-  end)
-
-local Mai = Window:NewTab("Other Scripts")
-local dv6 = Mai:NewSection("Other Scripts")
--- dv6,dv5,dv4,dv3,dv2,dv1 are all members of dv7 team
-dv6:NewButton("Elite Hub (5+ Games)", "c", function()
-game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Executed!";
-    Text = "If not, Please contact the owner on discord(@g4m_.) or discord(@m4g_._), " .. players.LocalPlayer.DisplayName;
-    Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
-    Duration = 14
-    Button1 = "Okay"
-})
-loadstring(game:HttpGet("https://raw.githubusercontent.com/BrandonJay-BRX/Yarhm-Elite/main/Yarhm%20Elite.lua"))()
-  end)
--- splitt
-dv6:NewButton("Furious Hub", "c", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/vsqzz/FURIOUS2/main/FuriousHub'))()
   end)
