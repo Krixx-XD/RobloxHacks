@@ -16,6 +16,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
     Text = "DV7 Hub [The Rake] Has been executed for : " .. players.LocalPlayer.DisplayName;
     Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
     Duration = 14
+    Button1 = "Okay"
 })
 end)
 dv7:NewButton("MM2", "c", function()
@@ -25,6 +26,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
     Text = "If there are two scripts on ur screen, please close one of the scripts and enjoy the script, " .. players.LocalPlayer.DisplayName;
     Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
     Duration = 14
+    Button1 = "Okay"
 })
     loadstring(game:HttpGet("https://raw.githubusercontent.com/TheDV7s/RobloxHacks/main/scripts/mm2.lua"))()
 end)
@@ -64,7 +66,7 @@ _G.Settings = {
     ["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
     ["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
     ["No Explosions"] = true, -- Makes Explosion's invisible
-    ["No Clothes"] = true, -- Removes Clothing from the game
+    ["No Clothes"] = false, -- Removes Clothing from the game
     ["Low Water Graphics"] = true, -- Removes Water Quality
     ["No Shadows"] = true, -- Remove Shadows
     ["Low Rendering"] = true, -- Lower Rendering
