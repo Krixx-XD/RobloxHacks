@@ -16,7 +16,7 @@ local dv7team = discord:NewSection("Discord")
 dv7team:NewButton("Discord Server", "c", function()
     game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Discord"
-    Text =  https://discord.gg/cYexdSQRXW" .. players.LocalPlayer.DisplayName;
+    Text =  "https://discord.gg/cYexdSQRXW"
     Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
     Duration = 14
     Button1 = "Okay"
@@ -109,6 +109,6 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 loadstring(game:HttpGet("https://raw.githubusercontent.com/BrandonJay-BRX/Yarhm-Elite/main/Yarhm%20Elite.lua"))()
   end)
 -- splitt
-dv6:NewButton("Jul Hub New IceHub", "c", function()
+dv6:NewButton("Furious Hub", "c", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/vsqzz/FURIOUS2/main/FuriousHub'))()
   end)
