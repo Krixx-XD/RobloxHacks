@@ -1,8 +1,6 @@
                     DV7 SCRIPTS OFFICIAL PRIVATE LICENSE
                        Version 1, June 26, 2024
- Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
- Everyone is permitted to copy and distribute verbatim copies
- of this license document, but changing it is not allowed.
+Copyright (C) By the DV7s (({{ OWNER : (discord : @g4m_ )}}))
 
                             Preamble
 
