@@ -39,18 +39,3 @@ Tab:AddButton({
 })
   	end    
 })
-local Sections = Tab:AddSection({
-		Name = "FPS Related"
-	})
-Tab:AddButton({
-	Name = "FPS Booster",
-	Callback = function()
-      loadstring(game:httpGet("https://raw.githubusercontent.com/TheDV7s/RobloxHacks/main/scripts/FPS.lua"))() --path to execute
-      OrionLib:MakeNotification({
-	Name = "Executed!",
-	Content = "FPS Booster Has been executed!",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
-  	end    
-})
