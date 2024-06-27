@@ -69,64 +69,9 @@ local ClientTab = Window:CreateTab("Client", 4483345998) -- Title, Image
 		Name = "FreeCam",
 		CurrentValue = false,
 		Flag = "freeCam",
-		Callback = function(state)
-			_G.FreeCam = state
-			if _G.FreeCam == true then
-				pcall(function()
-
-					FreeCamPart.CFrame = game.Players.LocalPlayer.Character.Head.CFrame
-				end)
-				repeat wait()
-					pcall(function()
-						function tweenPart(time,partto,TSCF)
-							local tweenService = game:GetService("TweenService")
-							local tweenInfo = TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
-							local part = partto
-							local goal = {}
-							goal.CFrame = TSCF
-							local tween = tweenService:Create(part, tweenInfo, goal)
-							tween:Play()
-						end
-						game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Scriptable
-						local mouse = game.Players.LocalPlayer:GetMouse()
-						game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").Anchored = true
-						game.Workspace.CurrentCamera.CameraSubject = FreeCamPart
-
-						FreeCamPart.CFrame = CFrame.new(FreeCamPart.Position,mouse.Hit.Position)
-						if InputService:IsKeyDown(Enum.KeyCode.Space) then
-							tweenPart(0.04,FreeCamPart,FreeCamPart.CFrame + Vector3.new(0,_G.FreeCamSpeed,0))
-							--FreeCamPart.CFrame = FreeCamPart.CFrame + Vector3.new(0,_G.FreeCamSpeed,0)
-						elseif InputService:IsKeyDown(Enum.KeyCode.LeftShift) then
-							tweenPart(0.04,FreeCamPart,FreeCamPart.CFrame + Vector3.new(0,-_G.FreeCamSpeed,0))
-							--FreeCamPart.CFrame = FreeCamPart.CFrame + Vector3.new(0,-_G.FreeCamSpeed,0)
-						end
-						if true then
-							if InputService:IsKeyDown(Enum.KeyCode.W) then
-								tweenPart(0.04,FreeCamPart,FreeCamPart.CFrame+FreeCamPart.CFrame.LookVector * _G.FreeCamSpeed)
-								-- FreeCamPart.CFrame = FreeCamPart.CFrame+FreeCamPart.CFrame.LookVector * _G.FreeCamSpeed
-							elseif InputService:IsKeyDown(Enum.KeyCode.S) then
-								tweenPart(0.04,FreeCamPart,FreeCamPart.CFrame+FreeCamPart.CFrame.LookVector * -_G.FreeCamSpeed)
-								-- FreeCamPart.CFrame = FreeCamPart.CFrame+FreeCamPart.CFrame.LookVector * -_G.FreeCamSpeed
-							end
-						end
-					end)
-				until _G.FreeCam == false
-				pcall(function()
-					game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-					game.Workspace.CurrentCamera.CameraType = Enum.CameraType.Custom
-					game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.Head
-				end)
-			end
-		end,
-	})
-	ClientTab:CreateSlider({
-		Name = "FreeCam Speed",
-		Range = {0.01, 20},
-		Increment = 0.01,
-		CurrentValue = 0.2,
-		Flag = "Speed",
-		Callback = function(Value)
-			_G.FreeCamSpeed = Value
+		Callback = function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Roblox/Core-Scripts/master/CoreScriptsRoot/Modules/Server/FreeCamera/FreeCamera.lua"))()
+      print("Executed")
 		end,
 	})
 	ClientTab:CreateToggle({
@@ -194,7 +139,7 @@ local ExploitsTab = Window:CreateTab("Settings", 11252440305)
 		CurrentValue = 16,
 		Flag = "walkspeed",
 		Callback = function(state)
-			_G.WalkSpeedd=state
+			_G.WalkSpeed=state
 		end,
 	})
 
@@ -206,6 +151,24 @@ local ExploitsTab = Window:CreateTab("Settings", 11252440305)
 			_G.enableSpeed = state
 		end,
 	})
+local ExtrasTab = Window:CreateTab("Extra", 11252440305)
+ExtrasTab:CreateDropdown({
+   Name = "Supported Game Select",
+   Options = {"All Games Support","Rake Remastered Support"},
+   CurrentOption = {"Option 1"},
+   MultipleOptions = false,
+   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Option)
+      if Options[1] == true then
+        print("All Games Support")
+      end
+      if Options[2] == true then
+        if game.GameId == 847722000 then
+          print("Only Rake:RE Support")
+        end
+      end
+   end,
+})
 	SettingsTab:CreateButton({
 		Name = "Unload Gui",
 		Callback = function()
