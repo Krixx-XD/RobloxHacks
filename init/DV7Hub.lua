@@ -155,7 +155,7 @@ local SettingsTab = Window:CreateTab("Settings", 11252440305)
 
 ExtrasTab:CreateButton({
 		Name = "Block Spawner(Needs Hats)",
-    Callback = function()
+		Callback = function()
       for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
       if (v:IsA("Accessory")) then
           v.Handle.Mesh:remove() -- Turns your hats into blocks.
