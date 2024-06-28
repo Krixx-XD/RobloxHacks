@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 Rayfield:Notify({
    Title = "Welcome ",
-   Content = "Notification Content",
+   Content = "Welcome to The DV7 Hub! This is where all the best scripts are! ,You can request scripts at our discord",
    Duration = 6.5,
    Image = 4483362458,
    Actions = { -- Notification Buttons
