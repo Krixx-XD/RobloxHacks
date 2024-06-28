@@ -24,7 +24,7 @@ local Window = Rayfield:CreateWindow({
    },
    Discord = {
       Enabled = false,
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      Invite = "cSpZR2Kzy6", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
    KeySystem = true, -- Set this to true to use our key system
@@ -35,7 +35,7 @@ local Window = Rayfield:CreateWindow({
       FileName = "KeySystem_DV7", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"DV7Team","balls","a","DV7HubTop","Admin","Owner","Special","Ray","Gai","x","Miyo"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      Key = {"DV7Team","balls","a","DV7HubTop","Admin","Owner","Special","Ray","Gai","x","Miyo","Gai X Miyo",} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
 
@@ -152,10 +152,13 @@ local PlayerTab = Window:CreateTab("Player", 11252440515)
 	})
 local ExtrasTab = Window:CreateTab("Extra", 11252440305)
 local SettingsTab = Window:CreateTab("Settings", 11252440305)
-ExtrasTab:CreateButton({
+ExtrasTab:CreateSlider({
     Name = "Walkspeed (ALL GAMES)",
+    Range = {0,100}
+    CurrentValue = 16,
+    Flag = "WalkSpeedAllGames",
     Callback = function()
-      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Range
     end,
   })
       
