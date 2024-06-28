@@ -183,6 +183,14 @@ ExtrasTab:CreateButton({
 	SettingsTab:CreateButton({
 		Name = "Unload Gui",
 		Callback = function()
-			DestroyUI()
+      Rayfield:Destroy()
 		end,
 	})
+local RandomTab = Window:CreateTab("Random", 11252440305)
+RandomTab:CreateButton({
+    Name = "Print Something Random",
+    Callback = function()
+      print("I love clapping your mom every night and cumming in her..")
+      warn("I told you my secrets")
+    end,
+  })
