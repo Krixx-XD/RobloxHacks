@@ -102,7 +102,6 @@ local ClientTab = Window:CreateTab("Client", 4483345998) -- Title, Image
 		end,
 	})
 local PlayerTab = Window:CreateTab("Player", 11252440515)
-local ExploitsTab = Window:CreateTab("Settings", 11252440305)
 	PlayerTab:CreateToggle({
 		Name = "No Fall Damage",
 		CurrentValue = false,
