@@ -32,7 +32,7 @@ local Window = Rayfield:CreateWindow({
       Title = "DV7 Hub",
       Subtitle = "Key System",
       Note = "Join our discord sever and head over to #key",
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      FileName = "KeySystem_DV7", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = {"DV7Team","balls","a","DV7HubTop","Admin","Owner","Special","Ray","Gai","x","Miyo"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
@@ -152,23 +152,14 @@ local ExploitsTab = Window:CreateTab("Settings", 11252440305)
 		end,
 	})
 local ExtrasTab = Window:CreateTab("Extra", 11252440305)
-ExtrasTab:CreateDropdown({
-   Name = "Supported Game Select",
-   Options = {"All Games Support","Rake Remastered Support"},
-   CurrentOption = {"Option 1"},
-   MultipleOptions = false,
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Option)
-      if Options[1] == true then
-        print("All Games Support")
-      end
-      if Options[2] == true then
-        if game.GameId == 847722000 then
-          print("Only Rake:RE Support")
-        end
-      end
-   end,
-})
+local SettingsTab = Window:CreateTab("Settings", 11252440305)
+ExtrasTab:CreateButton({
+    Name = "Walkspeed (ALL GAMES)",
+    Callback = function()
+      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+    end,
+  })
+      
 	SettingsTab:CreateButton({
 		Name = "Unload Gui",
 		Callback = function()
