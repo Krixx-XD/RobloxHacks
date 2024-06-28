@@ -152,16 +152,34 @@ local PlayerTab = Window:CreateTab("Player", 11252440515)
 	})
 local ExtrasTab = Window:CreateTab("Extra", 11252440305)
 local SettingsTab = Window:CreateTab("Settings", 11252440305)
-ExtrasTab:CreateSlider({
-    Name = "Walkspeed (ALL GAMES)",
-    Range = {0,100}
-    CurrentValue = 16,
-    Flag = "WalkSpeedAllGames",
+
+ExtrasTab:CreateButton({
+		Name = "Block Spawner(Needs Hats)",
     Callback = function()
-      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Range
+      for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+      if (v:IsA("Accessory")) then
+          v.Handle.Mesh:remove() -- Turns your hats into blocks.
+        end
+        end
+        wait(0.25)
+      for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+      if (v:IsA("Accessory")) then
+          v.Parent = workspace -- Drops all your hats.
+        end
+        end
+        wait(0.25)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(0, -1000, 0))
+      game.Players.LocalPlayer.Character.Humanoid.Health = 0
+      wait(0.1)
+      warn("Spawned Blocks [FE]") -- Success Message.
     end,
   })
-      
+ExtrasTab:CreateButton({
+    Name = "FE Animations",
+    Callback = function()
+      loadstring(game:HttpGet('https://gist.githubusercontent.com/Dvrknvss/e2a906135f9e55d0d2ae7aaf337d8937/raw/dc055592803f8418ddf8ba7b84286f47638849d4/noidea'))()
+    end,
+  })
 	SettingsTab:CreateButton({
 		Name = "Unload Gui",
 		Callback = function()
