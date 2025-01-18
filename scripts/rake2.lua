@@ -228,9 +228,9 @@ if game.GameId == 847722000 then
 
 
 	local Window = Rayfield:CreateWindow({
-		Name = "DV7 Hub [The Rake]",
-		LoadingTitle = "DV7 Hub [The Rake]",
-		LoadingSubtitle = "DV7 Hub",
+		Name = "Prax Client",
+		LoadingTitle = "DV7",
+		LoadingSubtitle = "By RAGE",
 		ConfigurationSaving = {
 			Enabled = true,
 			FolderName = "DV7TheRake",
